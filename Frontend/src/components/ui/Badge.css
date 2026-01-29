@@ -1,0 +1,45 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-default {
+    background-color: var(--bg-surface);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-cool-gray);
+}
+
+.badge-success {
+    background-color: rgba(52, 211, 153, 0.1);
+    color: var(--success-mint);
+    border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.badge-warning {
+    background-color: rgba(251, 191, 36, 0.1);
+    color: var(--warning-gold);
+    border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.badge-error,
+.badge-danger {
+    background-color: rgba(251, 113, 133, 0.1);
+    color: var(--error-coral);
+    border: 1px solid rgba(251, 113, 133, 0.2);
+}
+
+.badge-active {
+    background: var(--brand-gradient);
+    color: white;
+    border: none;
+    padding: 0.35rem 0.85rem;
+    /* Slightly larger padding for pill shape */
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+}

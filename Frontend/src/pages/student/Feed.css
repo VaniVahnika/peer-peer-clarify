@@ -1,0 +1,304 @@
+.feed-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.feed-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .feed-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+.feed-controls {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .feed-controls {
+        width: auto;
+    }
+}
+
+.search-bar-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.search-icon-input {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+.feed-search-input {
+    width: 100%;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-cool-gray);
+    border-radius: 0.5rem;
+    padding: 0.625rem 1rem 0.625rem 2.5rem;
+    color: var(--text-primary);
+    font-size: 0.9375rem;
+    transition: all 0.2s;
+}
+
+.feed-search-input:focus {
+    outline: none;
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.domain-filters {
+    margin-bottom: 0.5rem;
+}
+
+.domain-select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.select-icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-secondary);
+    pointer-events: none;
+}
+
+.select-field.with-icon {
+    padding-left: 2.75rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%2394A3B8' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 1.25em 1.25em;
+    cursor: pointer;
+}
+
+/* Ensure global input-field styles are applied or replicated if needed, 
+   but since we use the class "input-field" it should pick up global styles if available.
+   However, forcing some defaults here is safer for the select element specifics. */
+select.input-field {
+    height: 42px;
+    /* Match typical input height */
+    line-height: inherit;
+}
+
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.post-card {
+    transition: border-color 0.2s;
+}
+
+.post-card:hover {
+    border-color: var(--text-secondary);
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.post-meta-top {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.student-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.student-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--border-cool-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.student-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.post-time {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-left: 2rem;
+    /* Align under name */
+}
+
+.post-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.post-description {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.code-snippet-block {
+    background-color: #0d1117;
+    /* Even darker for code blocks */
+    border: 1px solid var(--border-cool-gray);
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.code-label {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 0.375rem 0.75rem;
+    border-bottom: 1px solid var(--border-cool-gray);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.code-snippet-block pre {
+    padding: 1rem;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: #e6edf3;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-cool-gray);
+}
+
+.action-stats {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.request-session-btn {
+    color: var(--brand-primary);
+    border-color: var(--brand-primary);
+}
+
+.request-session-btn:hover {
+    background-color: rgba(99, 102, 241, 0.1);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-secondary);
+    background-color: var(--bg-card);
+    border-radius: 0.75rem;
+    border: 1px dashed var(--border-cool-gray);
+}
+
+/* Comment Editor Styles */
+.active-comment-btn {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: var(--brand-primary);
+    border-color: var(--brand-primary);
+}
+
+.comment-editor-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border-cool-gray);
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.comment-input-wrapper {
+    margin-bottom: 0.75rem;
+}
+
+.comment-textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-cool-gray);
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    resize: vertical;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.comment-textarea:focus {
+    outline: none;
+    border-color: var(--brand-secondary);
+    box-shadow: 0 0 0 2px rgba(217, 70, 239, 0.2);
+}
+
+.comment-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}

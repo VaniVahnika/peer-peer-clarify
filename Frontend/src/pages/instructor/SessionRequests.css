@@ -1,0 +1,121 @@
+.requests-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.requests-header {
+    margin-bottom: 2rem;
+}
+
+.requests-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.request-card-full {
+    border-left: 4px solid var(--accent-cyan);
+}
+
+.req-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-cool-gray);
+}
+
+.req-student-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar-med {
+    width: 48px;
+    height: 48px;
+    background-color: var(--bg-surface);
+    border-radius: 50%;
+    border: 1px solid var(--border-cool-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.student-name-large {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.req-time-ago {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.req-details {
+    margin-bottom: 1.5rem;
+}
+
+.req-topic {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.req-message {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.req-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.compatibility-score {
+    display: flex;
+    flex-direction: column;
+}
+
+.com-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.com-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--success-mint);
+}
+
+.req-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-btn-reject {
+    color: var(--error-coral);
+    gap: 0.5rem;
+}
+
+.action-btn-reject:hover {
+    background-color: rgba(251, 113, 133, 0.1);
+}
+
+.action-btn-accept-full {
+    gap: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}

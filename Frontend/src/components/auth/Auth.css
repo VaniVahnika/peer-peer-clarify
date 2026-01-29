@@ -1,0 +1,264 @@
+.auth-modal {
+    max-width: 450px !important;
+}
+
+/* Reused from Login.css */
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.auth-subtitle {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.auth-highlight {
+    background: var(--brand-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.error-banner {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--error-coral);
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.auth-footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.link-text {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.link-text:hover {
+    text-decoration: underline;
+}
+
+/* Role Selector from Register.jsx */
+.role-selector {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.role-option {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid var(--border-glass);
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.role-option:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.role-option.selected {
+    background: rgba(139, 92, 246, 0.1);
+    border-color: var(--primary-violet);
+    color: white;
+}
+
+.role-option input {
+    display: none;
+}
+
+/* Custom Dropdown Styles from Register.jsx */
+/* Custom File Upload */
+.hidden-file-input {
+    display: none;
+}
+
+.file-upload-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.85rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed var(--border-glass);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--text-secondary);
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.file-upload-label:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--text-secondary);
+    color: var(--text-primary);
+}
+
+.file-upload-label.active {
+    background: rgba(139, 92, 246, 0.1);
+    border-style: solid;
+    border-color: var(--primary-violet);
+    color: var(--text-primary);
+    justify-content: space-between;
+}
+
+.file-name {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.remove-file-btn {
+    padding: 0.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.remove-file-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--error-coral);
+}
+
+/* Updated Dropdown to match Input fields */
+.custom-select-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    /* Match Input background if possible, or keep consistent */
+    border: 1px solid var(--border-glass);
+    border-radius: 0.5rem;
+    padding: 0.85rem 1rem;
+    /* Match typical input padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+    gap: 1rem;
+    position: relative;
+    font-size: 1rem;
+    /* Match input font size */
+    color: var(--text-primary);
+}
+
+.custom-select-wrapper:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.custom-select-wrapper.active {
+    border-color: var(--primary-violet);
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.select-value-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+}
+
+.placeholder-text {
+    color: var(--text-secondary);
+    opacity: 0.7;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.selected-text {
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown-arrow {
+    color: var(--text-secondary);
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.dropdown-arrow.rotated {
+    transform: rotate(180deg);
+}
+
+.custom-dropdown-options {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 0.5rem;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    z-index: 50;
+}
+
+.custom-option {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all 0.2s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.custom-option:last-child {
+    border-bottom: none;
+}
+
+.custom-option:hover {
+    background: rgba(139, 92, 246, 0.1);
+    color: white;
+}
+
+.custom-option.selected {
+    background: var(--brand-gradient);
+    color: white;
+}

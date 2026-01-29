@@ -1,0 +1,164 @@
+.create-doubt-modal {
+    max-width: 700px;
+}
+
+.doubt-modal-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.modal-scroll-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-bottom: 1rem;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.input-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.input-field {
+    width: 100%;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-cool-gray);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+    color: var(--text-primary);
+    outline: none;
+    transition: all 0.2s;
+}
+
+.input-field:focus {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.1);
+}
+
+.select-field {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2394a3b8' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    cursor: pointer;
+}
+
+.textarea-field {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.code-editor-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.code-editor-wrapper {
+    background-color: #0d1117;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-cool-gray);
+    padding: 0.5rem;
+}
+
+.code-editor-input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #e6edf3;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    resize: vertical;
+    outline: none;
+}
+
+.code-editor-input::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.attachment-options-mini {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-cool-gray);
+}
+
+.attach-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.attach-btn-mini {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 0.25rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.attach-btn-mini:hover {
+    color: var(--accent-cyan);
+    background-color: rgba(34, 211, 238, 0.1);
+}
+
+.modal-footer-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-cool-gray);
+}
+
+.file-previews {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+}
+
+.file-chip {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-cool-gray);
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-primary);
+}
+
+.file-name {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.remove-file-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.remove-file-btn:hover {
+    color: var(--error-coral);
+}
